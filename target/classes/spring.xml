@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+                http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="appln" class="com.hcl.model.Emp">
+		<property name="empId" value="111" />
+		<property name="empName" value="Jean" />
+		<property name="empSal" value="1234" />
+	</bean>
+
+<!--Autowire  by Name -->
+	<bean id="test" class="com.hcl.config.Application"
+		autowire="byName" />
+
+
+	<bean id="addr" class="com.hcl.model.Address">
+		<property name="state" value="NY" />
+
+	</bean>
+	
+	
+<!--Autowire  by Type -->
+	
+    <bean id="user" class="com.hcl.model.User" autowire="byType"/>
+	
+	
+	<bean id="prd" class="com.hcl.model.Product">
+		<property name="prdName" value="Laptop" />
+
+	</bean>
+	
+	
+<!--Autowire  by constructor-->
+	
+    <bean id="cus" class="com.hcl.model.Customer" autowire="constructor"/>
+	
+
+	
+	
+
+
+
+
+
+
+</beans>  
